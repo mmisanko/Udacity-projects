@@ -29,13 +29,12 @@ object, video {
 	max-width: 100%;
 	height: auto;
 }
-
 body {
 	color: #7d97ad;
 }
 
 #app-shell {
-	margin: 20px;
+	margin: auto;
 }
 
 #hr {
@@ -51,6 +50,9 @@ body {
 	flex-direction: row;
 }
 
+.box {
+	box-sizing: border-box;
+}
 
 .header {
 	overflow: auto;
@@ -59,7 +61,7 @@ body {
 }
 
 .header a.logo {
-
+	fl
 }
 
 .header-right {
@@ -67,8 +69,8 @@ body {
 }
 
 .logo {
-	float: left;
-	display: inline;
+	float: left; display: flex | inline-flex ;
+
 }
 
 .row {
@@ -98,6 +100,11 @@ body {
 .main {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.ul {
+	display: inline-block;
+	: 
 }
 
 @media all and (max-width: 382px;){
