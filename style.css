@@ -21,17 +21,21 @@ h2 {
 
 p {
 	font-family: 'Raleway', sans-serif;
-	text-align: justify;
+	text-align: center;
+	font-size: 18px;
+
 }
 
-img, embed,
-object, video {
-	max-width: 100%;
+img {
+	width: 100%;
 	height: auto;
+	display: block;
 }
+
 body {
 	color: #7d97ad;
 }
+
 
 #app-shell {
 	margin: auto;
@@ -43,11 +47,33 @@ body {
 	background-color: #7d97ad;
 }
 
-#content {
+#images {
 	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: row;
+	display:inline-flex;
+	flex-wrap: wrap;
+}
+
+#featured-txt {
+	display: block;
+	font-size: 1em;
+	margin-bottom: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+	flex-wrap: wrap-reverse;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .box {
@@ -61,22 +87,29 @@ body {
 }
 
 .header a.logo {
-	fl
+
 }
 
 .header-right {
 	float: right;
 }
 
+.img-responsive {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
 .logo {
-	float: left; display: flex | inline-flex ;
+	float: left;
 
 }
 
-.row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+.uppercase {
+	text-transform: uppercase;
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight:bold;
+	margin: 8px;
 }
 
 .wrapper {
@@ -94,28 +127,13 @@ body {
 .wrapper > * {
   padding: 10px;
   flex: 1 100%;
-
-}
-
-.main {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.ul {
-	display: inline-block;
-	: 
-}
-
-@media all and (max-width: 382px;){
-
 }
 
 
-@media screen and (max-width: 382px) {
+@media screen and (max-width: 325px) {
   .header a {
     float: none;
-    display: block;
+    display: inline;
     text-align: center;
   }
   .header-right {
@@ -123,20 +141,24 @@ body {
   }
 
 	h1 {
-		font-size: 2em;
+		font-size: 40px;
 		text-align: center;
 	}
 
 	h3 {
-		font-size: 1em;
+		font-size: 20px;
 		text-align: center;
+	}
+
+	p {
+		font-size: 13px;
 	}
 
 }
 
 @media all and (min-width: 768px) {
 	.header { flex: auto;}
-	.main		{ flex: auto;}
+	.img-responsive	{ flex: auto;}
 }
 
 body {
