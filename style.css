@@ -36,7 +36,6 @@ body {
 	color: #7d97ad;
 }
 
-
 #app-shell {
 	margin: auto;
 }
@@ -59,15 +58,54 @@ body {
 	margin-bottom: 8px;
 }
 
+#img-title {
+	color: #2d3c49;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+#img-title2 {
+	color: #2d3c49;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+#img-title3 {
+	color: #2d3c49;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+#img-link1 {
+	align-content: center;
+}
+
+#img-link2 {
+	text-align: center;
+}
+
+#img-link3 {
+	text-align: center;
+}
+
+
 * {
   box-sizing: border-box;
 }
 
 .img-container {
-  float: left;
+  float: none;
   width: 33.33%;
   padding: 10px;
-	flex-wrap: wrap-reverse;
+
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .clearfix::after {
@@ -94,16 +132,11 @@ body {
 	float: right;
 }
 
-.img-responsive {
-	width: 100%;
-	height: auto;
-	display: block;
-}
-
 .logo {
 	float: left;
 
 }
+
 
 .uppercase {
 	text-transform: uppercase;
@@ -130,15 +163,25 @@ body {
 }
 
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 375px) {
   .header a {
-    float: none;
-    display: inline;
+    display: inline-flex;
     text-align: center;
+		vertical-align: middle;
   }
-  .header-right {
+	.header-right {
     float: none;
   }
+
+	.header {
+		vertical-align: middle;
+		align-items: center;
+
+	}
+
+	.logo {
+		float: none;
+	}
 
 	h1 {
 		font-size: 40px;
@@ -151,14 +194,14 @@ body {
 	}
 
 	p {
-		font-size: 13px;
+		font-size: 15px;
+		text-align:  center;
 	}
 
 }
 
 @media all and (min-width: 768px) {
 	.header { flex: auto;}
-	.img-responsive	{ flex: auto;}
 }
 
 body {
