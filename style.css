@@ -49,15 +49,6 @@ body {
 	color: #7d97ad;
 }
 
-#uppercase {
-	text-transform: uppercase;
-	font-family: 'Julius Sans One', sans-serif;
-	font-weight:bolder;
-	margin: 6px;
-	font-size: 2em;
-	padding: 4px;
-}
-
 #logo {
 
 	float: left;
@@ -81,6 +72,33 @@ body {
 		display: flex;
 		flex-flow: wrap;
 		justify-content:space-around;
+}
+
+#uppercase1 {
+	text-transform: uppercase;
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight:bolder;
+	margin: 6px;
+	font-size: 2em;
+	padding: 4px;
+}
+
+#uppercase2 {
+	text-transform: uppercase;
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight:bolder;
+	margin: 6px;
+	font-size: 2em;
+	padding: 4px;
+}
+
+#uppercase3 {
+	text-transform: uppercase;
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight:bolder;
+	margin: 6px;
+	font-size: 2em;
+	padding: 4px;
 }
 
 
@@ -131,12 +149,7 @@ body {
 	align-content: space-around;
 	}
 
-.row1 {
-	vertical-align: middle;
-	width: 100%;
-}
-
-.row2::after {
+.row::after {
 	content: "";
   clear: both;
   display: table;
@@ -162,10 +175,6 @@ body {
 	h2 {
 		font-size: 6vw;
 
-	}
-
-	.img-title {
-		font-size: flex;
 	}
 
 	.column1 .column2 .column3{
