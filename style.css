@@ -1,3 +1,16 @@
+
+a:link, a:visited {
+  background-color: #48c6ef;
+  color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+  display: flex;
+}
+
+a:hover, a:active {
+  background-color: #dfbd11;
+}
+
 h1 {
 	font-family: 'Julius Sans One', sans-serif;
 	font-weight: lighter;
@@ -21,74 +34,53 @@ h2 {
 
 p {
 	font-family: 'Raleway', sans-serif;
-	text-align: center;
-	font-size: 18px;
+	text-align: justify;
+	font-size: 1.15em;
 
 }
 
 img {
 	width: 100%;
-	height: auto;
 	display: block;
+
 }
 
 body {
 	color: #7d97ad;
 }
 
-#app-shell {
-	margin: auto;
+#uppercase {
+	text-transform: uppercase;
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight:bolder;
+	margin: 6px;
+	font-size: 2em;
+	padding: 4px;
 }
 
+#logo {
+
+	float: left;
+	flex-flow: wrap;
+}
 #hr {
 	height: 4px;
 	border: none;
 	background-color: #7d97ad;
-}
-
-#images {
-	width: 100%;
-	display:inline-flex;
-	flex-wrap: wrap;
+	margin-bottom: 2em;
 }
 
 #featured-txt {
-	display: block;
+	display: flex;
 	font-size: 1em;
-	margin-bottom: 8px;
+	margin-bottom: 1em;
+
 }
 
-#img-title {
-	color: #2d3c49;
-	text-align: center;
-	font-size: 30px;
-	font-weight: bolder;
-}
-
-#img-title2 {
-	color: #2d3c49;
-	text-align: center;
-	font-size: 30px;
-	font-weight: bolder;
-}
-
-#img-title3 {
-	color: #2d3c49;
-	text-align: center;
-	font-size: 30px;
-	font-weight: bolder;
-}
-
-#img-link1 {
-	align-content: center;
-}
-
-#img-link2 {
-	text-align: center;
-}
-
-#img-link3 {
-	text-align: center;
+#main-box {
+		display: flex;
+		flex-flow: wrap;
+		justify-content:space-around;
 }
 
 
@@ -96,22 +88,19 @@ body {
   box-sizing: border-box;
 }
 
-.img-container {
-  float: none;
-  width: 33.33%;
-  padding: 10px;
 
-}
-
-.flex-container {
+.flex-container1 {
 	display: flex;
 	flex-wrap: wrap;
+	flex-flow: row wrap;
+	justify-content:space-around;
 }
 
-.clearfix::after {
+.container clearfix {
   content: "";
-  clear: both;
-  display: table;
+	clear: both;
+	height: 0px;
+	display: block;
 }
 
 .box {
@@ -119,91 +108,128 @@ body {
 }
 
 .header {
-	overflow: auto;
+	overflow: hidden;
   padding: 0px;
-	width: 100%
-}
-
-.header a.logo {
+	width: 100%;
 
 }
 
 .header-right {
 	float: right;
+
 }
 
-.logo {
+.img-title {
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.column {
 	float: left;
+  width: 33.33%;
+  padding: 4px;
+	align-content: space-around;
+	}
 
+.row1 {
+	vertical-align: middle;
+	width: 100%;
 }
 
-
-.uppercase {
-	text-transform: uppercase;
-	font-family: 'Julius Sans One', sans-serif;
-	font-weight:bold;
-	margin: 8px;
-}
-
-.wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  flex-direction: row;
-  font-weight: bold;
-  text-align: center;
-}
-
-.wrapper > * {
-  padding: 10px;
-  flex: 1 100%;
+.row2::after {
+	content: "";
+  clear: both;
+  display: table;
 }
 
 
 @media screen and (max-width: 375px) {
-  .header a {
-    display: inline-flex;
-    text-align: center;
-		vertical-align: middle;
-  }
+
 	.header-right {
     float: none;
   }
 
 	.header {
-		vertical-align: middle;
-		align-items: center;
-
-	}
-
-	.logo {
-		float: none;
+		overflow: hidden;
+		padding: 20px 10px;
 	}
 
 	h1 {
-		font-size: 40px;
-		text-align: center;
+		font-size: 8vw;
+
 	}
 
-	h3 {
-		font-size: 20px;
-		text-align: center;
+	h2 {
+		font-size: 6vw;
+
 	}
 
-	p {
-		font-size: 15px;
-		text-align:  center;
+	.img-title {
+		font-size: flex;
 	}
+
+	.column1 .column2 .column3{
+			width: 100%;
+		}
 
 }
 
-@media all and (min-width: 768px) {
-	.header { flex: auto;}
+@media all and (max-width: 487px) {
+
+	.header-right {
+		float: none;}
+
+	.header {
+		overflow: hidden;
+		padding: 20px 10px;
+	}
+
+	.column{
+			width: 100%;
+		}
+
+	h1 {
+		font-size: 8vw;
+	}
+
+	h2 {
+		font-size: 6vw;
+	}
+
+	* {box-sizing: border-box;}
+}
+
+@media all and (max-width: 768px) {
+
+	.header-right {
+		float: none;}
+
+	.header {
+		overflow: hidden;
+		padding: 20px 10px;
+		}
+
+ 	#uppercase {
+		font-size: 4vw;
+	}
+
+	* {box-sizing: border-box;}
+}
+
+
+@media all and (max-width: 1200px) {
+
+	.header-right {
+		float: none;}
+
+	.header {
+		overflow: hidden;
+		padding: 20px 10px;
+	}
+
+	* {box-sizing: border-box;}
 }
 
 body {
-  padding: 1em;
+  padding: 1.5em;
 }

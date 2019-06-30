@@ -1,76 +1,77 @@
 <!DOCTYPE html>
   <html>
-  <head>
+    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Mark Misanko - Front End Developer</title>
       <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
+    </head>
 
-  <body>
-    <div id="app-shell">
-    <div class="header">
-      <a href="#default" class="logo"><img src="Images/Udacity-logo.png"></img></a>
-      <div class="header-right">
+    <body>
+      <div class="header">
+        <div class="container clearfix">
+          <div id="logo">
+            <img src="Images/Udacity-logo.png" alt="logo Placeholder">
+          </div>
+        <div class="header-right">
           <h1>
             JANE DOETTE
           </h1>
           <h3>
-          FRONT-END NINJA
+            FRONT-END NINJA
           </h3>
-      </div>
-    </div>
-    </div>
-
-    <div id="hr">
-      <hr></hr>
-    </div><br>
-
-    <div id="main-box">
-      <img src= "Images/mainpic.png" alt="code-pic"></img>
-      <br>
-      <p>Welcome to my Portfolio Site! Feel free to browse some of my completed projects! More to come! Thank you for visiting my page. </p>
-    </div>
-    <br>
-
-    <div id="featured-txt">
-      <h2>featured work</h2>
-    </div>
-
-    <div class="clearfix">
-      <div class="img-container">
-          <img src="Images/appifypic.png" alt="icon" style="width:100%">
-        <div id="img-title" class="uppercase">
-          appify
         </div>
-        <a id="img-link1" href="https://github.com/udacity/Appify/">
-          https://github.com/udacity/Appify
-        </a>
-      </div>
-
-      <div class="img-container">
-        <img src="Images/sunflower.png" alt="flower" style="width:100%">
-        <div id="img-title2" class="uppercase">
-          sunflower
         </div>
-        <a id="img-link2" href="https://github.com/udacity/Sunflower/">
-          https://github.com/udacity/Sunflower
-        </a>
       </div>
 
-      <div class="img-container">
-        <img src="Images/bokeh.png" alt="sunlight" style="width:100%">
-        <div id="img-title3" class="uppercase">
-          bokeh
+        <div id="hr">
+          <hr></hr>
         </div>
-        <a id="img-link3" href="https://github.com/udacity/Bokeh/">
-          https://github.com/udacity/Bokeh
-        </a>
-      </div>
-    </div>
 
-  </body>
+        <div id="main-box">
+          <img src= "Images/mainpic.png" alt="code-pic"></img>
+          <p>Welcome to my Portfolio Site! Feel free to browse some of my completed projects! More to come! Thank you for visiting my page. </p>
+        </div>
+
+        <br>
+
+        <div id="featured-txt">
+          <h2>featured work</h2>
+        </div>
+
+        <div class="container clearfix">
+          <div class="row2">
+            <div class="column">
+              <img src="Images/appifypic.png" alt="icon" style="width:100%">
+                <a href="https://github.com/udacity/Appify/" target="_blank">
+                <div class="img-title" id="uppercase">
+                  appify
+                </div>
+                </a>
+            </div>
+
+            <div class="column">
+              <img src="Images/sunflower.png" alt="flower" style="width:100%">
+              <a href="https://github.com/udacity/Sunflower/" target="_blank">
+                <div class="img-title" id="uppercase">
+                sunflower
+                </div>
+              </a>
+            </div>
+
+            <div class="column">
+              <img src="Images/bokeh.png" alt="sunlight" style="width:100%">
+              <a href="https://github.com/udacity/Bokeh/" target="_blank">
+                <div class="img-title" id="uppercase">
+                  bokeh
+                </div>
+              </a>
+            </div>
+        </div>
+      </div>
+
+    </body>
 
   </html>
