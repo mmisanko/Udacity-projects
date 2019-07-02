@@ -1,7 +1,7 @@
 
 a:link, a:visited {
   background-color: #48c6ef;
-  color: #ffffff;
+  color: #fff;
 	text-align: center;
 	text-decoration: none;
   display: flex;
@@ -50,8 +50,7 @@ body {
 }
 
 #logo {
-
-	float: left;
+  float: left;
 	flex-flow: wrap;
 }
 #hr {
@@ -71,34 +70,7 @@ body {
 #main-box {
 		display: flex;
 		flex-flow: wrap;
-		justify-content:space-around;
-}
 
-#uppercase1 {
-	text-transform: uppercase;
-	font-family: 'Julius Sans One', sans-serif;
-	font-weight:bolder;
-	margin: 6px;
-	font-size: 2em;
-	padding: 4px;
-}
-
-#uppercase2 {
-	text-transform: uppercase;
-	font-family: 'Julius Sans One', sans-serif;
-	font-weight:bolder;
-	margin: 6px;
-	font-size: 2em;
-	padding: 4px;
-}
-
-#uppercase3 {
-	text-transform: uppercase;
-	font-family: 'Julius Sans One', sans-serif;
-	font-weight:bolder;
-	margin: 6px;
-	font-size: 2em;
-	padding: 4px;
 }
 
 
@@ -106,6 +78,9 @@ body {
   box-sizing: border-box;
 }
 
+.hero {
+  justify-content:space-around;
+}
 
 .flex-container1 {
 	display: flex;
@@ -140,11 +115,15 @@ body {
 .img-title {
 	flex-wrap: wrap;
 	width: 100%;
+  height: 100%;
+  margin: 1em;
+
 }
 
 .column {
 	float: left;
   width: 33.33%;
+  height: 100%;
   padding: 4px;
 	align-content: space-around;
 	}
@@ -155,11 +134,21 @@ body {
   display: table;
 }
 
+.uppercase1 {
+	text-transform: uppercase;
+	font-family: 'Julius Sans One', sans-serif;
+	font-weight:bolder;
+  margin: 6px;
+	font-size: 2em;
+	padding: 4px;
+  vertical-align: middle;
+}
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
 
 	.header-right {
-    float: none;
+	   align-content: center;
+     font-size: 7vw;
   }
 
 	.header {
@@ -167,26 +156,20 @@ body {
 		padding: 20px 10px;
 	}
 
-	h1 {
-		font-size: 8vw;
-
-	}
-
-	h2 {
-		font-size: 6vw;
-
-	}
-
-	.column1 .column2 .column3{
+  .column{
 			width: 100%;
 		}
+
+
 
 }
 
 @media all and (max-width: 487px) {
 
 	.header-right {
-		float: none;}
+		align-content: center;
+    font-size: 3vw;
+  }
 
 	.header {
 		overflow: hidden;
@@ -197,28 +180,20 @@ body {
 			width: 100%;
 		}
 
-	h1 {
-		font-size: 8vw;
-	}
-
-	h2 {
-		font-size: 6vw;
-	}
-
 	* {box-sizing: border-box;}
 }
 
 @media all and (max-width: 768px) {
 
 	.header-right {
-		float: none;}
+		align-content: center;}
 
 	.header {
 		overflow: hidden;
 		padding: 20px 10px;
 		}
 
- 	#uppercase {
+ 	.uppercase {
 		font-size: 4vw;
 	}
 
@@ -229,7 +204,7 @@ body {
 @media all and (max-width: 1200px) {
 
 	.header-right {
-		float: none;}
+	   align-content: center;}
 
 	.header {
 		overflow: hidden;
