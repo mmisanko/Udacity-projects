@@ -1,0 +1,115 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 50px;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background-image: url('../img/paradise.png'); background-size: cover;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: linear-gradient(to bottom, rgba(55,61,150,1) 0%,rgba(146,76,181,1) 13%,rgba(224,49,49,1) 30%,rgba(249,249,92,1) 49%,rgba(247,247,247,1) 59%,rgba(244,235,146,1) 60%,rgba(58,132,195,1) 60%,rgba(247,247,183,1) 68%,rgba(154,240,244,1) 78%,rgba(58,236,242,1) 82%,rgba(58,139,194,1) 94%,rgba(38,85,139,1) 100%);
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: hsl(133, 100%, 38%);
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: hsl(294, 76%, 43%);
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .timer {
+    display: inline-block;
+    margin-left: 60px;
+    margin-right: 5px;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
