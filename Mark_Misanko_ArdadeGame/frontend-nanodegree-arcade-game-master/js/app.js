@@ -8,8 +8,21 @@ class Hero {
     this.startY = this.vertical * 5 - 20;
     this.x = this.startX;
     this.y = this.startY;
-
   }
+
+  update() {
+    // Check collision here
+    for (let enemy of allEnemies) {
+      // Did player x and y collide with enemy?
+      if (this.y === enemy.y) {
+      console.log('Same row!');
+    }
+    console.log(this.y, enemy.y)
+  }
+    // Check win here?
+      // Did player x and y reach final tile?
+  }
+
   // Draw player sprite on current x and y coord position
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -46,13 +59,13 @@ class Hero {
 }
 };
 
-const player = new Hero();
     // Methods
       // Update position
-        // Check collision here
-          // Did player x and y collide with enemy?
-        // Check win here?
-          // Did player x and y reach final tile?
+
+
+
+      // Check win here?
+        // Did player x and y reach final tile?
       // Render
 
       // Handle keyboard input
@@ -60,21 +73,15 @@ const player = new Hero();
       // Reset Hero
           // Set x and y to starting x and y
 
-
-// Game level 1
-var level = 1;
-
 // Enemies our player must avoid
-var Enemy = function() {
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
-
-    // x pos
-    // y pos
-
-    // The image/sprite for our enemies, this uses
-    // a helper we've provided to easily load images
+var Enemy = function(x,y,speed) {
+    this.x = x;
+    this.y = y + 60;
+    this.speed = speed;
     this.sprite = 'images/enemy-bug.png';
+    this.step = 101;
+    this.boundary =  this.step * 5;
+    this.resetPos = -this.step;
 };
 
 // Update the enemy's position, required method for game
@@ -85,17 +92,29 @@ Enemy.prototype.update = function(dt) {
     // all computers.
 
     // If enemy is not passed boundary
+    if(this.x < this.boundary) {
       // Move forward
       // Increment x by speed * dt
-    // else
-      // Reset pos to start
+        this.x += this.speed * dt;
+    }
+     else
+     // reset position to start
+        this.x = this.resetPos;
 };
 
 // New Hero object
-
+const player = new Hero();
+// New Enemy object
+const beetle1 = new Enemy(-101, 0, 200);
+const beetle2 = new Enemy((-101 * 4), 0, 200);
+const beetle3 = new Enemy(-101, 83, 320);
+const beetle4 = new Enemy((-101 * 2.5), 168, 200);
+const beetle5 = new Enemy((-101 * 5), 168, 200);
 // Init allEnemies array
+const allEnemies = [];
 // For each enemy create and push new Enemy object into above array
-
+allEnemies.push(beetle1, beetle2, beetle3, beetle4, beetle5);
+console.log(allEnemies);
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
