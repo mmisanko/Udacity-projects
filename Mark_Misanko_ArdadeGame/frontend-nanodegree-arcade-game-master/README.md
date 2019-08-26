@@ -1,5 +1,5 @@
 # Classic Arcade Game based on "Frogger"
-##Summary
+## Summary
 
 Frogger Arcade is a variation of the classic Frogger arcade game.
 Goals/Winning
