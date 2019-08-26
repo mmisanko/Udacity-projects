@@ -1,7 +1,7 @@
 # Classic Arcade Game based on "Frogger"
 ## Summary
 
-Frogger Arcade is a variation of the classic Frogger arcade game.
+`River Dash` is a variation of the classic Frogger arcade game.
 Goals/Winning
 
 In this game the goal is simple, get the hero character to move across the gray bricks towards the water without getting hit by the enemy bugs. The user's score increases by one point for each level passed and decrease if collide with enemies. The number of enemy bugs also increase with each level and are randomly placed across the gray bricks at the start of each game.
