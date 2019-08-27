@@ -17,8 +17,9 @@ To run the application:
 
      Download the GitHub zip file or clone the repository onto your local workstation:
      Open a browser window and navigate to the index.html file in your application's directory.
-     
-     [River Dash download](https://github.com/mmisanko1969/Udacity-projects/tree/master/Mark_Misanko_ArdadeGame/frontend-nanodegree-arcade-game-master)
+
+
+[**River Dash download**](https://github.com/mmisanko1969/Udacity-projects/tree/master/Mark_Misanko_ArdadeGame/frontend-nanodegree-arcade-game-master)
 
 ### Tools / Techniques
 
