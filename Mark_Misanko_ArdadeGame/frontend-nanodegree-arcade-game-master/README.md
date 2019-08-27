@@ -1,21 +1,22 @@
 # Classic Arcade Game based on "Frogger"
 ## Summary
 
-`River Dash` is a variation of the classic Frogger arcade game.
-Goals/Winning
+River Dash is a variation of the classic Frogger arcade game.
 
-In this game the goal is simple, get the hero character to move across the gray bricks towards the water without getting hit by the enemy bugs. The user's score increases by one point for each level passed and decrease if collide with enemies. The number of enemy bugs also increase with each level and are randomly placed across the gray bricks at the start of each game.
+Player Goals to Win:
+
+In this game the goal is simple, get the hero character to jump forward or step left or right across the gray bricks to avoid colliding with "enemy" bugs. Your destination is to reach the water before losing a life by colliding with the enemy. If collision occurs with the enemy, your hero will default back to start. Once you reach the water, you win! Proceed to press "cancel" to restert the game.
+
 Movement and Controls
 
 Users move the hero character by using the main up/right/left/down arrow keys on their keyboard. You can pause the game with the "space" and change the player with "enter" keyboard;
 
-Demo online
 Installation
 
 To run the application:
 
-    * Download the GitHub zip file or clone the repository onto your local workstation:
-    * Open a browser window and navigate to the index.html file in your application's directory.
+     Download the GitHub zip file or clone the repository onto your local workstation:
+     Open a browser window and navigate to the index.html file in your application's directory.
 
 Tools / Techniques
 
