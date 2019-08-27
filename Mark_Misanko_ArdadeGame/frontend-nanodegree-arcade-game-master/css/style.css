@@ -1,3 +1,215 @@
 body {
     text-align: center;
+    background: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
 }
+
+h1 {
+    font-size: 2.75em;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    font-size: 1.75em;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    color: #376dff;
+}
+
+/* Styles for the Score Panel */
+
+    .score-panel {
+        width: 550px;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        margin: auto;
+    }
+
+    .score-panel .timer {
+	     display: inline-block;
+	     margin: 0 1rem;
+     }
+
+    .score-panel .stars {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        margin: 0 10px 0 10px;
+    }
+
+    .score-panel .stars li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .score-panel .restart {
+        float: right;
+        cursor: pointer;
+    }
+
+
+/* Start Modal */
+
+    .modal_start {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #ffffff;
+    }
+
+    .modal_start_body {
+        position: relative;
+        width: 700px;
+        top: 50%;
+        left: 50%;
+        background: #ffffff url('../images/geometry2.png');
+        transform: translate(-50%, -50%);
+        border-radius: 30px;
+        text-align: center;
+        padding: 2rem 2rem;
+        border:3px solid #376dff;
+    }
+
+    .modal_start_btn {
+        width: 300px;
+        height: 70px;
+        background: #388cbc;
+        border-radius:9px;
+        color:#fff;
+        font-size:30px;
+        border:1px solid #388cbc;
+        cursor: pointer;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .modal_start_btn:hover {
+        background: #418f3d;
+        border:1px solid #aa7ecd;
+    }
+
+    .modal_start_btn:active {
+        background: blue;
+    }
+
+    .modal_start ul {
+        list-style-type: none;
+        -webkit-padding-start: 25px;
+    }
+
+    .modal_start hr {
+        width: 80%;
+        border: 0;
+        height: 1px;
+    }
+
+    .hero-images {
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        width: 85%;
+    }
+
+    .hero-images div {
+        cursor: pointer;
+    }
+
+    .selected {
+        border: 3px solid #3ad921;
+        border-radius: 15px;
+    }
+/* END */
+
+/* Finish Modal */
+
+    .hide {
+        display: none;
+    }
+
+    .modal_bkgd {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(46, 61, 73, 0.5);
+    }
+
+    .modal_body {
+        position: relative;
+        width: 450px;
+        top: 50%;
+        left: 50%;
+        background: #ffffff url('../images/geometry2.png');
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+        border:3px solid #7625cc;
+    }
+
+    .modal_stats {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        align-items: center;
+    }
+
+    .modal_btns {
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+
+    .modal_btn {
+        width: 140px;
+        height: 50px;
+        background: #5FC148;
+        border-radius:9px;
+        color:#fff;
+        font-size:15px;
+        cursor: pointer;
+    }
+/* END */
+
+/* Success svg */
+svg {
+    width: 120px;
+    padding: 20px 0;
+    }
+    path, polyline{
+    fill: none;
+    stroke: #7625cc;
+    stroke-width: 20;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    }
+    .circle{
+    stroke-dasharray: 1260;
+    animation: circle 1s ease-out ;
+    }
+    .check{
+    stroke-dasharray: 430;
+    animation: check 1s ease-in ;
+    }
+    @keyframes circle {
+        0%, 40% {
+            stroke-dashoffset: -1260;
+        }
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+    @keyframes check {
+        0% {
+            stroke-dashoffset: 430;
+        }
+        40% {
+            stroke-dashoffset: 0;
+        }
+      }

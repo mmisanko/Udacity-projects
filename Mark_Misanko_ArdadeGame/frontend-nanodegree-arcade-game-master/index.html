@@ -2,12 +2,71 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Effective JavaScript: Frogger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Arcade Game Project by Mark Misanko">
+    <title>Classic Arcade Game</title>
+    <link rel="icon" href="images/Key.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
+    <header>
+      <h1><strong>River Dash</strong></h1>
+        <h2>Classic Arcade Game</h2>
+    </header>
+
+    <!-- Start Modal -->
+    <div class="modal_start hhide">
+        <div class="modal_start_body">
+
+            <h1><strong>River Dash</strong></h1>
+
+            <p><em>RULES :</em></p>
+            <ul>
+                <li>Use the keyboard keys to move the Hero left, right, up and down.</li>
+                <li>Avoid colliding into any one of the bugs("enemies").</li>
+            </ul>
+
+
+            <h2>Select your Hero:</h2>
+
+            <div id="heroes" class="hero-images">
+                <div class="char-boy"><img class="hero char-boy" src="images/boy.png" width="120px"></div>
+                <div class="char-cat-girl"><img class="hero char-cat-girl" src="images/cat-girl.png" width="120px"></div>
+                <div class="char-horn-girl"><img class="hero horn-girl" src="images/horn-girl.png" width="120px"></div>
+                <div class="char-pink-girl"><img class="hero pink-girl" src="images/pink-girl.png" width="120px"></div>
+                <div class="char-princess-girl"><img class="hero princess-girl" src="images/princess-girl.png" width="120px"></div>
+            </div>
+
+            <div class="modal_btns">
+                <button class="modal_start_btn">READY</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Finish modal -->
+    <div class="finish modal_bkgd hide">
+        <div class="modal_body">
+            <div class="modal_stats">
+                <svg viewBox="-10 -10 500 500">
+                <path class="circle" d="M877.28,335.72a203.17,203.17,0,0,1,37.86,118.1C915.14,565.26,823.44,657,712,657s-203.14-91.7-203.14-203.14S600.56,250.68,712,250.68a203.21,203.21,0,0,1,144.67,60.53"
+                transform="translate(-508.86 -250.68)" />
+                <polyline class="check" points="78.54 229.94 179.32 300.74 347.98 60.67" />
+                </svg>
+
+            <h2>You Won!</h2>
+            <h1>Congratulations!</h1>
+
+            </div>
+
+            <div class="modal_btns">
+                <button class="modal_btn btn_cancel">Cancel</button>
+            </div>
+        </div>
+      </div>
+
+  <script src="js/resources.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/engine.js"></script>
 </body>
 </html>

@@ -1,87 +1,23 @@
-// Hero class
-class Hero {
-  constructor() {
-    this.sprite = 'images/char-boy.png';
-    this.horizontal = 101;
-    this.vertical = 83;
-    this.startX = this.horizontal * 2;
-    this.startY = this.vertical * 5 - 20;
-    this.x = this.startX;
-    this.y = this.startY;
-  }
-
-  update() {
-    // Check collision here
-    for (let enemy of allEnemies) {
-      // Did player x and y collide with enemy?
-      if (this.y === enemy.y) {
-      console.log('Same row!');
-    }
-    console.log(this.y, enemy.y)
-  }
-    // Check win here?
-      // Did player x and y reach final tile?
-  }
-
-  // Draw player sprite on current x and y coord position
-  render() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-  }
-
-  /**
-   * Update player's x and y property according to input
-   *
-   * @param {string} input - Direction to travel
-   */
-  handleInput(input) {
-    switch(input) {
-      case 'left':
-          if (this.x > 0) {
-            this.x -= this.horizontal;
-          }
-        break;
-      case 'up':
-          if (this.y > 0) {
-            this.y -= this.vertical;
-          }
-        break;
-      case 'right':
-          if (this.x < this.horizontal * 4) {
-            this.x += this.horizontal;
-          }
-        break;
-      case 'down':
-          if (this.y < this.vertical * 4) {
-            this.y += this.vertical;
-          }
-        break;
-  }
-}
-};
-
-    // Methods
-      // Update position
-
-
-
-      // Check win here?
-        // Did player x and y reach final tile?
-      // Render
-
-      // Handle keyboard input
-          //
-      // Reset Hero
-          // Set x and y to starting x and y
 
 // Enemies our player must avoid
 var Enemy = function(x,y,speed) {
+    // Variables applied to each of our instances go here,
+    // we've provided one for you to get started
+
+    // X pos
+    // Y pos
     this.x = x;
-    this.y = y + 60;
-    this.speed = speed;
-    this.sprite = 'images/enemy-bug.png';
+    this.y = y+55;
     this.step = 101;
-    this.boundary =  this.step * 5;
+    this.boundary = this.step * 5;
     this.resetPos = -this.step;
+    this.speed = speed;
+
+
+    this.victory = false;
+    // The image/sprite for our enemies, this uses
+    // a helper we've provided to easily load images
+    this.sprite = 'images/enemy-bug.png';
 };
 
 // Update the enemy's position, required method for game
@@ -91,46 +27,126 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
 
-    // If enemy is not passed boundary
-    if(this.x < this.boundary) {
-      // Move forward
-      // Increment x by speed * dt
+    // if enemy is not passed boundary
+    if (this.x < this.boundary) {
+        // move forward
+        // increment x by speed * dt
         this.x += this.speed * dt;
     }
-     else
-     // reset position to start
+    // else
+        // reset to start point
+    else {
         this.x = this.resetPos;
+    }
 };
-
-// New Hero object
-const player = new Hero();
-// New Enemy object
-const beetle1 = new Enemy(-101, 0, 200);
-const beetle2 = new Enemy((-101 * 4), 0, 200);
-const beetle3 = new Enemy(-101, 83, 320);
-const beetle4 = new Enemy((-101 * 2.5), 168, 200);
-const beetle5 = new Enemy((-101 * 5), 168, 200);
-// Init allEnemies array
-const allEnemies = [];
-// For each enemy create and push new Enemy object into above array
-allEnemies.push(beetle1, beetle2, beetle3, beetle4, beetle5);
-console.log(allEnemies);
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
+    this.x;
+    this.y;
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-//
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
 
+// Player Class "Hero"
+class Hero {
+
+    // Constructor || Properties : x pos, y pos + sprite img
+    constructor() {
+        // Top left corner of the board
+        this.x = 0;
+        this.y = 0;
+
+        // Spaces between blocks, this numbers comes from engine.js
+        this.jump = 83;
+        this.step = 101;
+
+        // Start place on the bottmo middle row
+        this.startX = this.step * 2;
+        this.startY = (this.jump * 4) + 55;
+
+        // update the init location for our player "Hero"
+        this.x = this.startX;
+        this.y = this.startY;
+
+        // This is the image of the player
+        this.sprite = "images/char-cat-girl.png";
+    }
+
+// Methods :
+
+    // update()
+    update() {
+        // check collision here
+        // did player x and y collide with enemy?
+        for (let enemy of allEnemies) {
+            // console.log(enemy);
+            if (this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)) {
+                this.reset()
+                console.log(Touch);
+            }
+        }
+        // did the player touch the top row?
+        if (this.y === -28) {
+            this.victory = true;
+            console.log('winner');
+        }
+    }
+
+    // render()
+        // Draw player sprite on current x & y position?
+        render() {
+            ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+        }
+
+    // handleInput()
+        // handle keyboard input to move the player x or y
+        // @param {string} input - Direction to travel
+
+        handleInput(input) {
+            switch(input) {
+                case 'left' : if (this.x > 0) { this.x -= this.step }
+                break;
+                case 'up' : if (this.y > 0) { this.y -= this.jump }
+                break;
+                case 'right' : if (this.x < this.step * 4) { this.x += this.step }
+                break;
+                case 'down' : if (this.y < this.jump * 4) { this.y += this.jump }
+                break;
+
+            } console.log(`Hero x: ${this.x} | y: ${this.y}`);
+        }
+
+    // Reset the position x & y to the player to old location
+    reset() {
+        this.y = this.startY;
+        this.x = this.startX;
+    }
+
+
+}
+
+// add class Prize()
+    // render()
+    // update()
+    //
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-
+// New player object "Hero"
+// init allEnemies array
+// for each enemy create & push Enemy object into above array
+const player = new Hero(),
+    bug1 = new Enemy(-101, 0, 200),
+    bug2 = new Enemy(-101, 83, 300),
+    bug3 = new Enemy(-101*2.5, 83, 300),
+    bug4 = new Enemy(-101, 83*2, 250),
+    allEnemies = [];
+allEnemies.push(bug1,bug2,bug3,bug4);
 
 
 // This listens for key presses and sends the keys to your
@@ -145,3 +161,63 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+
+
+
+/*
+******* Start functions ******
+*/
+
+
+// array will hold selected hero image
+let selectedHeroArr = [];
+
+// selectors
+const heroImages = document.querySelector('.hero-images');
+const startBtn = document.querySelector('.modal_start_btn');
+
+// listen to click
+heroImages.addEventListener('click', event => {
+    const clickTarget = event.target;
+    if (clickTarget.classList.contains('hero')){
+        clickTarget.classList.add('selected');
+        addSelectedHero(clickTarget);
+        selectAndDeselect ();
+        getSpriteString();
+    }
+console.log('image selected');
+});
+
+// push selected images to "selectedHeroArr" array
+function addSelectedHero(clickTarget) {
+    selectedHeroArr.push(clickTarget);
+    console.log(selectedHeroArr);
+}
+
+// changing css classes
+function selectAndDeselect() {
+    if (selectedHeroArr.length > 1) {
+        selectedHeroArr[0].classList.remove("selected");
+        selectedHeroArr[1].classList.add("selected");
+        selectedHeroArr = [selectedHeroArr[1]];
+    };
+        console.log('Player selected');
+}
+
+// Get the parent class and returned as a string
+function getSpriteString() {
+    const parent = selectedHeroArr[0].parentElement;
+    let parentString = parent.classList[0];
+    console.log(parentString + ' Menas');
+    return parentString;
+}
+
+//startBtn.addEventListener('click', isHeroSelected);
+
+
+// MODAL Start"
+function toggleStartModal() {
+    const modal = document.querySelector('.modal_start');
+    modal.classList.toggle('hide');
+}

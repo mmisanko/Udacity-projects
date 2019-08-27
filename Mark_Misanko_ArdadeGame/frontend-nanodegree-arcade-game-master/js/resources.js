@@ -1,3 +1,4 @@
+
 /* Resources.js
  * This is simply an image loading utility. It eases the process of loading
  * image files so that they can be used within your game. It also includes
@@ -37,7 +38,7 @@
     function _load(url) {
         if(resourceCache[url]) {
             /* If this URL has been previously loaded it will exist within
-             * our resourceCache array. Just return that image rather than
+             * our resourceCache array. Just return that image rather
              * re-loading the image.
              */
             return resourceCache[url];
@@ -45,8 +46,10 @@
             /* This URL has not been previously loaded and is not present
              * within our cache; we'll need to load this image.
              */
-            var img = new Image();
-            img.onload = function() {
+
+        var img = new Image();
+
+        img.onload = function() {
                 /* Once our image has properly loaded, add it to our cache
                  * so that we can simply return this image if the developer
                  * attempts to load this file in the future.
