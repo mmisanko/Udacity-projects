@@ -1,4 +1,4 @@
-\# River Dash\#  \***Classic Arcade Game based on "Frogger"\*** 
+\# River Dash #\  ***Classic Arcade Game based on "Frogger"*** 
 
 ## Summary
 
