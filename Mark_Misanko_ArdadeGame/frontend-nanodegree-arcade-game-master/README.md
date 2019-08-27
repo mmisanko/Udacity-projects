@@ -3,7 +3,7 @@
 
 River Dash is a variation of the classic Frogger arcade game.
 
-Player Goals to Win:
+### Player Goals to Win:
 
 In this game the goal is simple, get the hero character to jump forward or step left or right across the gray bricks to avoid colliding with "enemy" bugs. Your destination is to reach the water before losing a life by colliding with the enemy. If collision occurs with the enemy, your hero will default back to start. Once you reach the water, you win! Proceed to press "cancel" to restert the game.
 
