@@ -1,7 +1,7 @@
 # Classic Arcade Game based on "Frogger"
 ## Summary
 
-#### River Dash  is a variation of the classic Frogger arcade game.
+**River Dash**  is a variation of the classic Frogger arcade game.
 
 ### Player Goals to Win:
 
@@ -15,7 +15,8 @@ Users move the hero character by using the main up/right/left/down arrow keys on
 
 To run the application:
 
-     Download the GitHub zip file or clone the repository onto your local workstation:
+     Download the [GitHub zip file](https://github.com/mmisanko1969/Udacity-projects/tree/master/Mark_Misanko_ArdadeGame/
+     frontend-nanodegree-arcade-game-master) or clone the repository onto your local workstation:
      Open a browser window and navigate to the index.html file in your application's directory.
 
 Tools / Techniques
