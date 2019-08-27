@@ -1,7 +1,7 @@
 # Classic Arcade Game based on "Frogger"
 ## Summary
 
-#### River Dash is a variation of the classic Frogger arcade game.
+#### River Dash #### is a variation of the classic Frogger arcade game.
 
 ### Player Goals to Win:
 
