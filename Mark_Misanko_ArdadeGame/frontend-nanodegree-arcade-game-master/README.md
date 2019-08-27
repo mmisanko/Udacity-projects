@@ -15,10 +15,12 @@ Users move the hero character by using the main up/right/left/down arrow keys on
 
 To run the application:
 
-     Download the [GitHub zip file] or clone the repository onto your local workstation:
+     Download the GitHub zip file or clone the repository onto your local workstation:
      Open a browser window and navigate to the index.html file in your application's directory.
 
-Tools / Techniques
+[River Dash Game](https://github.com/mmisanko1969/Udacity-projects/tree/master/Mark_Misanko_ArdadeGame/frontend-nanodegree-arcade-game-master)
+
+### Tools / Techniques
 
     Object-Oriented JavaScript
     constructor functions to create multiple Enemy instances
