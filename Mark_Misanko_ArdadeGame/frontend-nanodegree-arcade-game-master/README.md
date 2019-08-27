@@ -1,20 +1,32 @@
-# Classic Arcade Game Clone Project
+# Classic Arcade Game based on "Frogger"
+## Summary
 
-## Table of Contents
+#### River Dash  is a variation of the classic Frogger arcade game.
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+### Player Goals to Win:
 
-## Instructions
+In this game the goal is simple, get the hero character to jump forward or step left or right across the gray bricks to avoid colliding with "enemy" bugs. Your destination is to reach the water before losing a life by colliding with the enemy. If collision occurs with the enemy, your hero will default back to start. Once you reach the water, you win! Proceed to press "cancel" to restert the game.
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+### Movement and Controls
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+Users move the hero character by using the main up/right/left/down arrow keys on their keyboard. You can pause the game with the "space" and change the player with "enter" keyboard;
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
+### Installation
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+To run the application:
 
-## Contributing
+     Download the GitHub zip file or clone the repository onto your local workstation:
+     Open a browser window and navigate to the index.html file in your application's directory.
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+Tools / Techniques
+
+    Object-Oriented JavaScript
+    constructor functions to create multiple Enemy instances
+    prototypal inheritance
+    HTML5 Canvas API
+    resource loading via immediately-invoked function expressions (IIFE)
+
+Project Requirements
+
+https://review.udacity.com/#!/rubrics/15/view "Frogger Arcade Game Project Requirements"
+
